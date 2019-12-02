@@ -1,0 +1,18 @@
+<div class="col-md-4" *ngFor= "let bike of bikes">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            {{bike.marca}}
+            {{bike.rodada}}
+            <button class="btn btn-danger" (click)="deleteBike(bike.id)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </div>
+        <img [src]="bike.image" class="card-img-top img">
+        <div class="card-body">
+            <p> $ {{bike.precio}}</p>
+            <a [routerLink]="['/bikes/edit',bike.id]" class="btn btn-info btn-block">
+                Edit bike
+            </a>
+        </div>
+    </div>
+</div>

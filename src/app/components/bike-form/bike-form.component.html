@@ -1,0 +1,37 @@
+<div class="col-md-5 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="marca" [(ngModel)]="bike.marca" placeholder="Marca" class="form-control" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="rodada" [(ngModel)]="bike.rodada" placeholder="Rodada" class="form-control" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="precio" [(ngModel)]="bike.precio" placeholder="Precio" class="form-control" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="url" name="image" [(ngModel)]="bike.image" placeholder="Image" class="form-control">
+                </div>
+                <!-- validacion si edita o guarda -->
+                <button class="btn btn-success btn-block" (click)=" edit ? updateBike() : saveNewBike()">
+                    crear
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <img [src]="bike.image == ''? '/assets/no_img.png' : bike.image" class="card-img-top">
+        <h3> {{bike.marca =='' ? 'Marca' :bike.marca }}</h3>
+        <h4>{{bike.rodada =='' ? 'Rodada' :bike.rodada}}</h4>
+        <h4>{{bike.precio =='' ? 'Precio $' :bike.precio}}</h4>
+        <p>{{bike.created_at | date:'yyyy-MM-dd'}}</p>
+    </div>
+</div>
