@@ -9,10 +9,9 @@ import { Observable } from 'rxjs';
 export class BikesService {
 
     API_URI = 'http://localhost:3000/api';
-    
   constructor(private http: HttpClient) { }
 
-  getBikes(){
+  getBikes() {
   return this.http.get(`${this.API_URI}/bikes`);
   }
 
@@ -29,6 +28,7 @@ export class BikesService {
   }
 
   updateBike(id: string|number, updatedBike: Bike): Observable<Bike>{
-    return this.http.put(`${this.API_URI}/bikes/${id}`,updatedBike);
-  }
-}
+    return this.http.put(`${this.API_URI}/bikes/${id}`,updatedBike); 
+  } 
+} 
+

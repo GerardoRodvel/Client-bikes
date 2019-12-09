@@ -12,15 +12,15 @@ const routes: Routes = [
 },
 {
   path: 'bikes',
-  component:BikeListComponent
+  component: BikeListComponent
 },
 {
   path: 'bikes/add',
-  component:BikeFormComponent
+  component: BikeFormComponent
 },
 {
   path: 'bikes/edit/:id',
-  component:BikeFormComponent
+  component: BikeFormComponent
 }
 
 ];

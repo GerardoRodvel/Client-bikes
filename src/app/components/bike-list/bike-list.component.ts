@@ -15,8 +15,7 @@ export class BikeListComponent implements OnInit {
   constructor(private bikeService: BikesService) { }
 
   ngOnInit() {
-    this.getBikes();
-    
+    this.getBikes();    
   }
 
   getBikes(){
@@ -36,8 +35,6 @@ export class BikeListComponent implements OnInit {
       },
       err => console.log(err)
     )
-  }
-
-
+  } 
 
 }
