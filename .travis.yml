@@ -14,5 +14,12 @@ before_script:
 
 script:
     - ng lint
-    - npm run e2e
     - ng build --prod --base-href "https://GerardoRodvel.github.io/Client-bikes/"
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN 
+    local_dir: dist/
+    on:
+      branch: master
