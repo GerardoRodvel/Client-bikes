@@ -20,7 +20,7 @@ export class BikeListComponent implements OnInit {
 
   getBikes() {
     this.bikeService.getBikes().subscribe(
-      res =>{
+      res => {
         this.bikes = res;
       },
       err => console.error(err)

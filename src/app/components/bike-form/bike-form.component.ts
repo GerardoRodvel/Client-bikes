@@ -22,7 +22,7 @@ export class BikeFormComponent implements OnInit {
     created_at: new Date()
   };
 
-  edit: boolean = false;
+  edit: boolean;
 
   constructor(private bikeService: BikesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -38,7 +38,7 @@ export class BikeFormComponent implements OnInit {
           },
           err =>
             console.log(err)
-        ); 
+        );
       }
 
   }
