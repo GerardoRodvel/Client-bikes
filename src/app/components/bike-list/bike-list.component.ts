@@ -15,10 +15,10 @@ export class BikeListComponent implements OnInit {
   constructor(private bikeService: BikesService) { }
 
   ngOnInit() {
-    this.getBikes();    
+    this.getBikes();
   }
 
-  getBikes(){
+  getBikes() {
     this.bikeService.getBikes().subscribe(
       res =>{
         this.bikes = res;
@@ -27,14 +27,14 @@ export class BikeListComponent implements OnInit {
     );
   }
 
-  deleteBike(id: string){
+  deleteBike(id: string) {
     this.bikeService.deleteBike(id).subscribe(
       res => {
         console.log(res);
         this.getBikes();
       },
       err => console.log(err)
-    )
-  } 
+    );
+  }
 
 }

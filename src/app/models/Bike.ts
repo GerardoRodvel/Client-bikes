@@ -5,4 +5,4 @@ export interface Bike {
     precio?: string;
     image?: string;
     created_at?: Date;
-} 
+}

@@ -22,23 +22,23 @@ export class BikeFormComponent implements OnInit {
     created_at: new Date()
   };
 
-  edit:boolean = false;
+  edit: boolean = false;
 
   constructor(private bikeService: BikesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     const params = this.activatedRoute.snapshot.params;
     console.log(params);
-    if( params.id) {
+    if (params.id) {
         this.bikeService.getBike(params.id).subscribe(
           res => {
             console.log(res);
             this.bike = res;
             this.edit = true;
           },
-          err =>  
+          err =>
             console.log(err)
-        ) 
+        ); 
       }
 
   }
@@ -53,7 +53,7 @@ export class BikeFormComponent implements OnInit {
         this.router.navigate(['/bikes']);
       },
       err => console.error(err)
-    ) 
+    );
   }
 
 /* actualizar bike */
@@ -66,7 +66,7 @@ export class BikeFormComponent implements OnInit {
         this.router.navigate(['/bikes']);
       },
       err => console.log(err)
-    ) 
+    );
   }
 
 

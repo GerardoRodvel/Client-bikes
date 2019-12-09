@@ -15,20 +15,20 @@ export class BikesService {
   return this.http.get(`${this.API_URI}/bikes`);
   }
 
-  getBike(id: string){
+  getBike(id: string) {
     return this.http.get(`${this.API_URI}/bikes/${id}`);
   }
 
-  deleteBike(id: string){
+  deleteBike(id: string) {
     return this.http.delete(`${this.API_URI}/bikes/${id}`);
   }
 
-  saveBike(bike: Bike){
+  saveBike(bike: Bike) {
     return this.http.post(`${this.API_URI}/bikes`, bike);
   }
 
-  updateBike(id: string|number, updatedBike: Bike): Observable<Bike>{
-    return this.http.put(`${this.API_URI}/bikes/${id}`,updatedBike); 
-  } 
-} 
+  updateBike(id: string|number, updatedBike: Bike): Observable<Bike> {
+    return this.http.put(`${this.API_URI}/bikes/${id}`, updatedBike);
+  }
+}
 
