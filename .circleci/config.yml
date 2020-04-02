@@ -10,7 +10,7 @@ jobs:
         - checkout
         # Log the current branch
         - run:
-            name: Show current branch
+            name: master
             command: echo ${CIRCLE_BRANCH}
         # Restore local dependencies from cache
         - restore_cache:
