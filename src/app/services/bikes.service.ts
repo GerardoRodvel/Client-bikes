@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class BikesService {
 
-   API_URI = 'https://3.83.143.230:3000/api';
+   API_URI = 'http://3.83.143.230:3000/api';
     /*API_URI = 'http://157.245.189.89:3000/api';*/
   constructor(private http: HttpClient) { }
 
