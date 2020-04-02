@@ -14,6 +14,6 @@ jobs:
           paths:
             - "node_modules"
       - run: xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
-      - npm: run test-headless
+      - run: test-headless
       
        
