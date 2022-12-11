@@ -25,7 +25,7 @@
     "@angular/router": "~8.2.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "boostrap": "^2.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-path": "^0.3.8",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
